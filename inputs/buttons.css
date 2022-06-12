@@ -1,0 +1,143 @@
+
+.button__container{
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(6,1fr);
+    grid-auto-rows: minmax(100px,auto);
+}
+.button__container div{
+    background: #ecf0f1;
+    padding: 1em;
+
+}
+.btn{
+    color: white;
+    border-radius: 6px;
+    padding: 10px 32px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+
+.btn-primary{
+    background: #6366F1;
+    border: 1px solid #6366F1;
+}
+.btn-success{
+    background: #22C55E;
+    border: 1px solid #22C55E;
+}
+.btn-secondary{
+    background: #64748B;
+    border: 1px solid #64748B;
+}
+.btn-info{
+    background: #3B82F6;
+    border: 1px solid #3B82F6;
+}
+.btn-warning{
+    background: #F59E0B;
+    border: 1px solid #F59E0B;
+}
+.btn-danger{
+    background: #EF4444;
+    border: 1px solid #EF4444;
+}
+
+.btn-danger:hover{
+     border-color: #DC2626;
+     background: #DC2626;
+     color: #ffffff;
+ }
+.btn-warning:hover{
+     border-color: #D97706;
+     background: #D97706;
+     color: #ffffff;
+ }
+.btn-info:hover{
+     border-color: #2563EB;
+     background: #2563EB;
+     color: #ffffff;
+ }
+
+.btn-secondary:hover{
+     border-color: #475569;
+     background: #475569;
+     color: #ffffff;
+ }
+
+ .btn-success:hover{
+     border-color: #16A34A;
+     background: #16A34A;
+     color: #ffffff;
+ }
+ .btn-primary:hover{
+     border-color: #4F46E5;
+     background: #4F46E5;
+     color: #ffffff;
+ }
+
+.btn-primary-animated-top{
+    display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: #6366F1;
+    border: 1px solid #6366F1;
+	transition: .3s ease all;
+	position: relative;
+	overflow: hidden;
+}
+
+
+.btn-primary-animated-top::after{
+    content: "";
+	width: 100%;
+	height: 100%;
+	background: #4F46E5;
+	position: absolute;
+	z-index: 1;
+	top: -80px;
+	left: 0;
+    border-color: #4F46E5;
+	transition: .3s ease-in-out all;
+ }
+.btn-primary-animated-top:hover::after {
+	top: 0;
+}
+.btn-primary-animated-top span {
+	position: relative;
+	z-index: 2;
+	transition: .3s ease all;
+}
+
+.btn-success-animated-top{
+    display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: #22C55E;
+    border: 1px solid #22C55E;
+	transition: .3s ease all;
+	position: relative;
+	overflow: hidden;
+}
+.btn-success-animated-top::after{
+    content: "";
+	width: 100%;
+    border-color: #16A34A;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: calc(-100% - 40px);
+    border-bottom: 40px solid #16A34A;
+    border-right: 40px solid transparent;
+	transition: .3s ease-in-out all;
+ }
+.btn-success-animated-top:hover::after {
+	left: 0;
+}
+
+.btn-success-animated-top span {
+	position: relative;
+	z-index: 2;
+	transition: .3s ease all;
+}
